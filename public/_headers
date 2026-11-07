@@ -1,0 +1,16 @@
+# 带内容哈希的静态资源可长期强缓存
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.mjs
+  Content-Type: text/javascript; charset=utf-8
+
+/favicon.svg
+  Cache-Control: public, max-age=86400
+
+# 站点级安全基线。刻意不设置 CSP / connect-src：
+# BYOK 需要允许访客浏览器直连自己填写的任意大模型端点。
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

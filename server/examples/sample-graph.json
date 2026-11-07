@@ -1,0 +1,13 @@
+{
+  "caseId": "sample-respiratory-case",
+  "caseTitle": "示例呼吸系统病例",
+  "centerSolution": { "id": "node_0", "title": "病例最终解决方案", "content": "整合病例线索、补充检查、鉴别诊断与风险分层后形成需教师审核的决策。", "sourceRefs": ["待教师补充：请核对指定教材及病例原文"] },
+  "categories": [
+    { "id": "physiology", "name": "生理", "color": "#7C9A82" }, { "id": "pathology", "name": "病理", "color": "#C4776B" }, { "id": "diagnosis", "name": "诊断", "color": "#C79A5B" }, { "id": "treatment", "name": "治疗", "color": "#7C93B8" }, { "id": "pharm", "name": "药理", "color": "#A98BB0" }
+  ],
+  "nodes": [
+    { "id": "node_1", "title": "气体交换的基本原理", "question": "肺泡如何完成氧气与二氧化碳交换？", "category": "physiology", "layer": 3, "content": "结合教材复习通气、弥散与灌注。", "sourceRefs": ["待教师补充：请核对指定教材及病例原文"], "prerequisites": [], "assessment": { "question": "气体交换主要发生于？", "options": ["肺泡-毛细血管界面", "胃黏膜", "肾小球", "骨髓"], "answer": "肺泡-毛细血管界面", "passScore": 0.8 }, "status": "locked" },
+    { "id": "node_2", "title": "病例症状机制", "question": "感染可能如何引发咳嗽与气促？", "category": "pathology", "layer": 2, "content": "结合气道炎症、分泌物与气体交换变化进行解释。", "sourceRefs": ["待教师补充：请核对指定教材及病例原文"], "prerequisites": ["node_1"], "assessment": { "question": "完成机制判断需要首先？", "options": ["理解正常呼吸生理", "忽略病史", "跳过检查", "预设结论"], "answer": "理解正常呼吸生理", "passScore": 0.8 }, "status": "locked" }
+  ],
+  "edges": [ { "source": "node_0", "target": "node_1", "type": "radial" }, { "source": "node_0", "target": "node_2", "type": "radial" }, { "source": "node_1", "target": "node_2", "type": "prerequisite" } ]
+}

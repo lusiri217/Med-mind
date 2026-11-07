@@ -1,0 +1,21 @@
+# 依赖与构建产物（可重新 npm install / npm run build 生成）
+node_modules/
+dist/
+.vite/
+@esbuild/
+@rolldown/
+*.tsbuildinfo
+
+# 本地临时输出
+outputs/
+work/
+*.log
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+# 系统文件
+.DS_Store
+Thumbs.db

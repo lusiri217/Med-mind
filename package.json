@@ -1,0 +1,19 @@
+{
+  "name": "med-mind",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "tsx watch server/src/index.ts",
+    "dev:client": "vite",
+    "build": "tsc -b && vite build",
+    "start": "tsx server/src/index.ts"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest", "cors": "latest", "express": "latest", "lucide-react": "latest", "pdfjs-dist": "latest", "react": "latest", "react-dom": "latest", "react-force-graph-3d": "latest", "three": "latest", "zustand": "latest"
+  },
+  "devDependencies": {
+    "@types/cors": "latest", "@types/express": "latest", "@types/node": "latest", "@types/react": "latest", "@types/react-dom": "latest", "autoprefixer": "latest", "concurrently": "latest", "postcss": "latest", "tailwindcss": "latest", "tsx": "latest", "typescript": "latest", "vite": "latest"
+  }
+}
